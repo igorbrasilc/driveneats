@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E5E5E5;
+}
+
+header {
+    height: 92px;
+    width: 100vw;
+    max-width: 414px;
+    margin: auto;
+    background-color: #CF2B2B;
+}
+
+header span {
+    font-family: 'Righteous', cursive;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 55px;
+    margin-left: 21px;
+}
+
+header p {
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    margin-left: 21px;
+}
+
+main {
+    width: 100vw;
+    max-width: 414px;
+    margin: auto;
+    margin-bottom: 16px;
+}
+
+.pratos {
+    display: flex;
+}
+
+article {
+    width: 172px;
+    height: 216px;
+    border-radius: 9px;
+    background-color: #FFFFFF;
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+article img {
+    width: 144px;
+    height: 87px;
+    margin-top: 18px;
+    margin-left: 14px;
+    margin-right: 14px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+.titulo_section {
+    font-family: 'Righteous', cursive;
+    color: #333333;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32px;
+    margin-left: 19px;
+    margin-top: 31px;
+    margin-bottom: 17px;
+}
+
+.titulo_prato {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18,75px;
+    color: #333333;
+    margin-left: 15px;
+    margin-right: 11px;
+    margin-bottom: 4px;
+}
+
+.subtitulo_prato {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 17,58px;
+    color: #A6A6A6;
+    margin-left: 14px;
+    margin-right: 11px;
+    margin-bottom: 5px;
+    position: absolute;
+    top: 150px;
+}
+
+.preço_prato {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18,75px;
+    color: #000000;
+    position: absolute;
+    bottom: 0;
+    margin-left: 14px;
+    margin-bottom: 13px;
+}
+
+section {
+    overflow-x: scroll;
+}
+
+.titulo-bebida-sobremesa {
+    margin-top: 27px;
+}
+
+footer {
+    width: 100vw;
+    max-width: 414px;
+    height: 92px;
+    margin: auto;
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa-footer {
+    width: 364px;
+    height: 61px;
+    border-radius: 50px;
+    background-color: #CBCBCB;
+    display: flex;
+    align-items: center;
+}
+
+.caixa-footer p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23,44px;
+    color: #FFF;
+    text-align: center;
+    margin-left: 90px;
+    margin-right: 90px;
+}
