@@ -13,15 +13,17 @@
 </head>
 <body>
     <!--aqui vai a barra topo-->
-    <header>
-        <span>DrivenEats</span>
-        <p>Sua comida em 6 minutos</p>
-    </header>
+    <div class="container-header">
+        <header>
+            <span>DrivenEats</span>
+            <p>Sua comida em 6 minutos</p>
+        </header>
+    </div>
 
     <!--aqui vai o menu-->
     <main>
         <!--pratos do combo-->
-        <section class="menu" style="margin-top: 92px;">
+        <section class="menu" style="margin-top: calc(31px - 18px);">
             <p class="titulo_section">Primeiro, seu prato</p>
             <div class="pratos" data-identifier="dishes">
                 <article data-identifier="food-option">
@@ -105,7 +107,7 @@
             </div>
         </section>
         <!--sobremesas do combo-->
-        <section class="menu" style="margin-bottom: 108px;">
+        <section class="menu" style="margin-bottom: 16px;">
             <p class="titulo_section titulo-bebida-sobremesa">Por fim, sua sobremesa</p>
             <div class="pratos" data-identifier="desserts">
                 <article data-identifier="food-option">
@@ -149,12 +151,14 @@
     </main>
 
     <!--aqui vai o footer-->
-        <footer>
-            <div class="caixa-interna-footer">
-                <p>
-                    Selecione os 3 itens para fechar o pedido
-                </p>
-            </div>
-        </footer>
+        <div class="container-footer">
+            <footer>
+                <div class="caixa-interna-footer">
+                    <p>
+                        Selecione os 3 itens para fechar o pedido
+                    </p>
+                </div>
+            </footer>
+        </div>
 </body>
 </html>
