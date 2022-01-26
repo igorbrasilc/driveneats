@@ -10,8 +10,10 @@ header {
     height: 92px;
     width: 100vw;
     max-width: 414px;
-    margin: auto;
     background-color: #CF2B2B;
+    position: fixed;
+    z-index: 1;
+    top: 0;
 }
 
 header span {
@@ -35,8 +37,6 @@ header p {
 main {
     width: 100vw;
     max-width: 414px;
-    margin: auto;
-    margin-bottom: 16px;
 }
 
 .pratos {
@@ -126,14 +126,16 @@ footer {
     width: 100vw;
     max-width: 414px;
     height: 92px;
-    margin: auto;
     background-color: #FFF;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 16px;
+    position: fixed;
+    bottom: 0;
 }
 
-.caixa-footer {
+.caixa-interna-footer {
     width: 364px;
     height: 61px;
     border-radius: 50px;
@@ -142,7 +144,7 @@ footer {
     align-items: center;
 }
 
-.caixa-footer p {
+.caixa-interna-footer p {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-style: normal;
