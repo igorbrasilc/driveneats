@@ -190,3 +190,101 @@ footer {
     margin-left: 90px;
     margin-right: 90px;
 }
+
+aside {
+    width: 377px;
+    height: 353px;
+    position: fixed;
+    top: calc(50% - 353px/2);
+    left: calc(50% - 353px/2 - 10px);
+    background-color: #50D074;
+    opacity: 1;
+    border-radius: 9px;
+}
+
+.tela-sem-finalizar-pedido {
+    opacity: 1;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+    margin-top: 21px;
+    margin-bottom: 28px;
+    color: #fff;
+}
+
+.pedido-e-preco {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 26px;
+    margin-right: 25px;
+    margin-bottom: 13px;
+}
+
+.pedido-e-preco p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 23,44px;
+    color: #FFF;
+}
+
+.preco-total {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 26px;
+    margin-right: 25px;
+    margin-bottom: 13px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 23,44px;
+    color: #FFF;
+}
+
+.botoes-finalizar-pedido {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 10px;  
+    align-items: center;
+}
+
+.pedido-confirmado {
+    background-color: #fff;
+    color: #50D074;
+    border-radius: 12px;
+    width: 333px;
+    height: 52px;
+    margin-left: 24px;
+    margin-right: 20px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 23,44px;
+}
+
+.cancelar-pedido {
+    background-color: #50D074;
+    color: #fff;
+    border-radius: 12px;
+    width: 333px;
+    height: 52px;
+    margin-left: 24px;
+    margin-right: 20px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 23,44px;
+}

@@ -12,163 +12,193 @@
     <title>Driven Eats do Igor</title>
 </head>
 <body>
-    <!--aqui vai a barra topo-->
-    <div class="container-header">
-        <header>
-            <span>DrivenEats</span>
-            <p>Sua comida em 6 minutos</p>
-        </header>
-    </div>
-
-    <!--aqui vai o menu-->
-    <main>
-        <!--pratos do combo-->
-        <section class="menu" style="margin-top: calc(31px - 18px);">
-            <p class="titulo_section">Primeiro, seu prato</p>
-            <div class="pratos" data-identifier="dishes">
-                <article class="empanado" onclick="escolherEmpanado()" data-identifier="food-option">
-                    <img src="img/empanado.jpg" alt="frango-empanado"/>
-                    <p class="titulo_prato" data-identifier="food-title">
-                        Franguinho empanado
-                    </p>
-                    <p class="subtitulo_prato">
-                        Principalmente empanação
-                    </p>
-                    <p class="preço_prato" data-identifier="food-price">
-                        R$ 15,00
-                    </p>
-                    <ion-icon name="checkmark-circle-outline" class="escondido"></ion-icon>
-                </article>
-                <article class="grelhado" onclick="escolherGrelhado()" data-identifier="food-option">
-                    <img src="img/grelhado.jpg" alt="frango-grelhado"/>
-                    <p class="titulo_prato" data-identifier="food-title">
-                        Franguinho grelhado
-                    </p>
-                    <p class="subtitulo_prato">
-                        Principalmente grelhação
-                    </p>
-                    <p class="preço_prato" data-identifier="food-price">
-                        R$ 15,50
-                    </p>
-                    <ion-icon name="checkmark-circle-outline" class="escondido"></ion-icon>
-                </article>
-                <article class="steak" onclick="escolherSteak()" data-identifier="food-option">
-                    <img src="img/steak.jpg" alt="steak"/>
-                    <p class="titulo_prato" data-identifier="steak">
-                        Steak c/ batata frita, decorado
-                    </p>
-                    <p class="subtitulo_prato">
-                        Steak, batata e um matinho
-                    </p>
-                    <p class="preço_prato" data-identifier="food-price">
-                        R$ 18,00
-                    </p>
-                    <ion-icon name="checkmark-circle-outline" class="escondido"></ion-icon>
-                </article>
+        <div class="tela-sem-finalizar-pedido">
+            <!--aqui vai a barra topo-->
+            <div class="container-header">
+                <header>
+                    <span>DrivenEats</span>
+                    <p>Sua comida em 6 minutos</p>
+                </header>
             </div>
-        </section>
-        <!--bebidas do combo-->
-        <section class="menu">
-            <p class="titulo_section titulo-bebida-sobremesa">Agora, sua bebida</p>
-            <div class="pratos" data-identifier="drinks">
-                <article class="lata" onclick="escolherLata()" data-identifier="food-option">
-                    <img src="img/coca_lata.png" alt="coca-lata"/>
-                    <p class="titulo_prato" data-identifier="food-title">
-                        Coquinha gelada
+            <!--aqui vai o menu-->
+            <main>
+                <!--pratos do combo-->
+                <section class="menu" style="margin-top: calc(31px - 18px);">
+                    <p class="titulo_section">Primeiro, seu prato</p>
+                    <div class="pratos" data-identifier="dishes">
+                        <article class="empanado" onclick="escolherEmpanado()" data-identifier="food-option">
+                            <img src="img/empanado.jpg" alt="frango-empanado"/>
+                            <p class="titulo_prato" data-identifier="food-title">
+                                Franguinho empanado
+                            </p>
+                            <p class="subtitulo_prato">
+                                Principalmente empanação
+                            </p>
+                            <p class="preço_prato" data-identifier="food-price">
+                                R$ 15,00
+                            </p>
+                            <ion-icon name="checkmark-circle-outline" class="escondido"></ion-icon>
+                        </article>
+                        <article class="grelhado" onclick="escolherGrelhado()" data-identifier="food-option">
+                            <img src="img/grelhado.jpg" alt="frango-grelhado"/>
+                            <p class="titulo_prato" data-identifier="food-title">
+                                Franguinho grelhado
+                            </p>
+                            <p class="subtitulo_prato">
+                                Principalmente grelhação
+                            </p>
+                            <p class="preço_prato" data-identifier="food-price">
+                                R$ 15,50
+                            </p>
+                            <ion-icon name="checkmark-circle-outline" class="escondido"></ion-icon>
+                        </article>
+                        <article class="steak" onclick="escolherSteak()" data-identifier="food-option">
+                            <img src="img/steak.jpg" alt="steak"/>
+                            <p class="titulo_prato" data-identifier="steak">
+                                Steak c/ batata frita, decorado
+                            </p>
+                            <p class="subtitulo_prato">
+                                Steak, batata e um matinho
+                            </p>
+                            <p class="preço_prato" data-identifier="food-price">
+                                R$ 18,00
+                            </p>
+                            <ion-icon name="checkmark-circle-outline" class="escondido"></ion-icon>
+                        </article>
+                    </div>
+                </section>
+                <!--bebidas do combo-->
+                <section class="menu">
+                    <p class="titulo_section titulo-bebida-sobremesa">Agora, sua bebida</p>
+                    <div class="pratos" data-identifier="drinks">
+                        <article class="lata" onclick="escolherLata()" data-identifier="food-option">
+                            <img src="img/coca_lata.png" alt="coca-lata"/>
+                            <p class="titulo_prato" data-identifier="food-title">
+                                Coquinha gelada
+                            </p>
+                            <p class="subtitulo_prato">
+                                Lata
+                            </p>
+                            <p class="preço_prato" data-identifier="food-price">
+                                R$ 4,00
+                            </p>
+                            <ion-icon name="checkmark-circle-outline" class="escondido"></ion-icon>
+                        </article>
+                        <article class="garrafinha" onclick="escolherGarrafinha()" data-identifier="food-option">
+                            <img src="img/coca_garrafa.jpg" alt="coca-garrafa"/>
+                            <p class="titulo_prato" data-identifier="food-title">
+                                Coca gelada
+                            </p>
+                            <p class="subtitulo_prato">
+                                Garrafinha
+                            </p>
+                            <p class="preço_prato" data-identifier="food-price">
+                                R$ 5,50
+                            </p>
+                            <ion-icon name="checkmark-circle-outline" class="escondido"></ion-icon>
+                        </article>
+                        <article class="litrao" onclick="escolherLitrao()" data-identifier="food-option">
+                            <img src="img/coca_litro.jpg" alt="coca-litro"/>
+                            <p class="titulo_prato" data-identifier="food-title">
+                                Cocona gelada
+                            </p>
+                            <p class="subtitulo_prato">
+                                Litrão
+                            </p>
+                            <p class="preço_prato" data-identifier="food-price">
+                                R$ 9,00
+                            </p>
+                            <ion-icon name="checkmark-circle-outline" class="escondido"></ion-icon>
+                        </article>
+                    </div>
+                </section>
+                <!--sobremesas do combo-->
+                <section class="menu" style="margin-bottom: 16px;">
+                    <p class="titulo_section titulo-bebida-sobremesa">Por fim, sua sobremesa</p>
+                    <div class="pratos" data-identifier="desserts">
+                        <article class="pudim" onclick="escolherPudim()" data-identifier="food-option">
+                            <img src="img/pudim.jpg" alt="pudim"/>
+                            <p class="titulo_prato" data-identifier="food-title">
+                                Pudim
+                            </p>
+                            <p class="subtitulo_prato">
+                                Pudim de leite
+                            </p>
+                            <p class="preço_prato" data-identifier="food-price">
+                                R$ 8,00
+                            </p>
+                            <ion-icon name="checkmark-circle-outline" class="escondido"></ion-icon>
+                        </article>
+                        <article class="brigadeiro" onclick="escolherBrigadeiro()" data-identifier="food-option">
+                            <img src="img/prato_brigadeiro.jpg" alt="brigadeiro"/>
+                            <p class="titulo_prato" data-identifier="food-title">
+                                Prato de brigadeiro
+                            </p>
+                            <p class="subtitulo_prato">
+                                Tem uns 6
+                            </p>
+                            <p class="preço_prato" data-identifier="food-price">
+                                R$ 9,00
+                            </p>
+                            <ion-icon name="checkmark-circle-outline" class="escondido"></ion-icon>
+                        </article>
+                        <article class="bolo" onclick="escolherBolo()" data-identifier="food-option">
+                            <img src="img/bolo_pote.jpg" alt="bolo"/>
+                            <p class="titulo_prato" data-identifier="food-title">
+                                Bolo de pote
+                            </p>
+                            <p class="subtitulo_prato">
+                                Um pote e um bolo (dentro)
+                            </p>
+                            <p class="preço_prato" data-identifier="food-price">
+                                R$ 10,00
+                            </p>
+                            <ion-icon name="checkmark-circle-outline" class="escondido icone"></ion-icon>
+                        </article>
+                    </div>
+                </section>
+            </main>
+            <!--aqui vai o footer-->
+                <div class="container-footer">
+                    <footer>
+                        <div class="caixa-interna-footer">
+                            <p>
+                                Selecione os 3 itens para fechar o pedido
+                            </p>
+                        </div>
+                    </footer>
+                </div>
+        </div>
+        <!--tela de finalizar pedido-->
+        <aside class="escondido">
+            <div class="caixa-finalizar-pedido">
+                <h1>Confirme seu pedido</h1>
+                <div class="pedido-e-preco">
+                    <p class="pedido">Frango empanado</p>
+                    <p class="preco">15,00</p>
+                </div>
+                <div class="pedido-e-preco">
+                    <p class="pedido">Frango empanado</p>
+                    <p class="preco">15,00</p>
+                </div>
+                <div class="pedido-e-preco">
+                    <p class="pedido">Frango empanado</p>
+                    <p class="preco">15,00</p>
+                </div>
+                <div class="preco-total">
+                    <p class="texto">
+                        TOTAL
                     </p>
-                    <p class="subtitulo_prato">
-                        Lata
-                    </p>
-                    <p class="preço_prato" data-identifier="food-price">
-                        R$ 4,00
-                    </p>
-                    <ion-icon name="checkmark-circle-outline" class="escondido"></ion-icon>
-                </article>
-                <article class="garrafinha" onclick="escolherGarrafinha()" data-identifier="food-option">
-                    <img src="img/coca_garrafa.jpg" alt="coca-garrafa"/>
-                    <p class="titulo_prato" data-identifier="food-title">
-                        Coca gelada
-                    </p>
-                    <p class="subtitulo_prato">
-                        Garrafinha
-                    </p>
-                    <p class="preço_prato" data-identifier="food-price">
-                        R$ 5,50
-                    </p>
-                    <ion-icon name="checkmark-circle-outline" class="escondido"></ion-icon>
-                </article>
-                <article class="litrao" onclick="escolherLitrao()" data-identifier="food-option">
-                    <img src="img/coca_litro.jpg" alt="coca-litro"/>
-                    <p class="titulo_prato" data-identifier="food-title">
-                        Cocona gelada
-                    </p>
-                    <p class="subtitulo_prato">
-                        Litrão
-                    </p>
-                    <p class="preço_prato" data-identifier="food-price">
-                        R$ 9,00
-                    </p>
-                    <ion-icon name="checkmark-circle-outline" class="escondido"></ion-icon>
-                </article>
-            </div>
-        </section>
-        <!--sobremesas do combo-->
-        <section class="menu" style="margin-bottom: 16px;">
-            <p class="titulo_section titulo-bebida-sobremesa">Por fim, sua sobremesa</p>
-            <div class="pratos" data-identifier="desserts">
-                <article class="pudim" onclick="escolherPudim()" data-identifier="food-option">
-                    <img src="img/pudim.jpg" alt="pudim"/>
-                    <p class="titulo_prato" data-identifier="food-title">
-                        Pudim
-                    </p>
-                    <p class="subtitulo_prato">
-                        Pudim de leite
-                    </p>
-                    <p class="preço_prato" data-identifier="food-price">
-                        R$ 8,00
-                    </p>
-                    <ion-icon name="checkmark-circle-outline" class="escondido"></ion-icon>
-                </article>
-                <article class="brigadeiro" onclick="escolherBrigadeiro()" data-identifier="food-option">
-                    <img src="img/prato_brigadeiro.jpg" alt="brigadeiro"/>
-                    <p class="titulo_prato" data-identifier="food-title">
-                        Prato de brigadeiro
-                    </p>
-                    <p class="subtitulo_prato">
-                        Tem uns 6
-                    </p>
-                    <p class="preço_prato" data-identifier="food-price">
-                        R$ 9,00
-                    </p>
-                    <ion-icon name="checkmark-circle-outline" class="escondido"></ion-icon>
-                </article>
-                <article class="bolo" onclick="escolherBolo()" data-identifier="food-option">
-                    <img src="img/bolo_pote.jpg" alt="bolo"/>
-                    <p class="titulo_prato" data-identifier="food-title">
-                        Bolo de pote
-                    </p>
-                    <p class="subtitulo_prato">
-                        Um pote e um bolo (dentro)
-                    </p>
-                    <p class="preço_prato" data-identifier="food-price">
-                        R$ 10,00
-                    </p>
-                    <ion-icon name="checkmark-circle-outline" class="escondido icone"></ion-icon>
-                </article>
-            </div>
-        </section>
-    </main>
-
-    <!--aqui vai o footer-->
-        <div class="container-footer">
-            <footer>
-                <div class="caixa-interna-footer">
-                    <p>
-                        Selecione os 3 itens para fechar o pedido
+                    <p class="total">
+                        Soma
                     </p>
                 </div>
-            </footer>
-        </div>
+                <div class="botoes-finalizar-pedido">
+                    <button class="pedido-confirmado">Tudo certo, pode pedir!</button>
+                    <button class="cancelar-pedido">Cancelar</button>
+                </div>
+            </div>
+        </aside>     
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>    
     <script src="scripts.js"></script>
 </body>
