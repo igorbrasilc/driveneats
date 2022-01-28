@@ -26,7 +26,7 @@
         <section class="menu" style="margin-top: calc(31px - 18px);">
             <p class="titulo_section">Primeiro, seu prato</p>
             <div class="pratos" data-identifier="dishes">
-                <article data-identifier="food-option">
+                <article class="empanado" onclick="escolherEmpanado()" data-identifier="food-option">
                     <img src="img/empanado.jpg" alt="frango-empanado"/>
                     <p class="titulo_prato" data-identifier="food-title">
                         Franguinho empanado
@@ -38,7 +38,7 @@
                         R$ 15,00
                     </p>
                 </article>
-                <article data-identifier="food-option">
+                <article class="grelhado" onclick="escolherGrelhado()" data-identifier="food-option">
                     <img src="img/grelhado.jpg" alt="frango-grelhado"/>
                     <p class="titulo_prato" data-identifier="food-title">
                         Franguinho grelhado
@@ -50,7 +50,7 @@
                         R$ 15,50
                     </p>
                 </article>
-                <article data-identifier="food-option">
+                <article class="steak" onclick="escolherSteak()" data-identifier="food-option">
                     <img src="img/steak.jpg" alt="steak"/>
                     <p class="titulo_prato" data-identifier="steak">
                         Steak c/ batata frita, decorado
@@ -68,7 +68,7 @@
         <section class="menu">
             <p class="titulo_section titulo-bebida-sobremesa">Agora, sua bebida</p>
             <div class="pratos" data-identifier="drinks">
-                <article data-identifier="food-option">
+                <article class="lata" onclick="escolherLata()" data-identifier="food-option">
                     <img src="img/coca_lata.png" alt="coca-lata"/>
                     <p class="titulo_prato" data-identifier="food-title">
                         Coquinha gelada
@@ -80,7 +80,7 @@
                         R$ 4,00
                     </p>
                 </article>
-                <article data-identifier="food-option">
+                <article class="garrafinha" onclick="escolherGarrafinha()" data-identifier="food-option">
                     <img src="img/coca_garrafa.jpg" alt="coca-garrafa"/>
                     <p class="titulo_prato" data-identifier="food-title">
                         Coca gelada
@@ -92,7 +92,7 @@
                         R$ 5,50
                     </p>
                 </article>
-                <article data-identifier="food-option">
+                <article class="litrao" onclick="escolherLitrao()" data-identifier="food-option">
                     <img src="img/coca_litro.jpg" alt="coca-litro"/>
                     <p class="titulo_prato" data-identifier="food-title">
                         Cocona gelada
@@ -110,7 +110,7 @@
         <section class="menu" style="margin-bottom: 16px;">
             <p class="titulo_section titulo-bebida-sobremesa">Por fim, sua sobremesa</p>
             <div class="pratos" data-identifier="desserts">
-                <article data-identifier="food-option">
+                <article class="pudim" onclick="escolherPudim()" data-identifier="food-option">
                     <img src="img/pudim.jpg" alt="pudim"/>
                     <p class="titulo_prato" data-identifier="food-title">
                         Pudim
@@ -122,7 +122,7 @@
                         R$ 8,00
                     </p>
                 </article>
-                <article data-identifier="food-option">
+                <article class="brigadeiro" onclick="escolherBrigadeiro()" data-identifier="food-option">
                     <img src="img/prato_brigadeiro.jpg" alt="brigadeiro"/>
                     <p class="titulo_prato" data-identifier="food-title">
                         Prato de brigadeiro
@@ -134,7 +134,7 @@
                         R$ 9,00
                     </p>
                 </article>
-                <article data-identifier="food-option">
+                <article class="bolo" onclick="escolherBolo()" data-identifier="food-option">
                     <img src="img/bolo_pote.jpg" alt="bolo"/>
                     <p class="titulo_prato" data-identifier="food-title">
                         Bolo de pote
@@ -160,5 +160,7 @@
                 </div>
             </footer>
         </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>    
+    <script src="scripts.js"></script>
 </body>
 </html>

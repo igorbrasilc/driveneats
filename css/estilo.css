@@ -61,7 +61,11 @@ article {
     display: flex;
     flex-direction: column;
     position: relative;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.2)
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.borda-verde {
+    border: 5px solid #32B72F;
 }
 
 article img {
@@ -119,7 +123,7 @@ article img {
     line-height: 18,75px;
     color: #000000;
     position: absolute;
-    bottom: 0;
+    bottom: -8px;
     margin-left: 14px;
     margin-bottom: 13px;
 }
