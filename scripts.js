@@ -7,6 +7,7 @@ const steak = document.querySelector(".steak");
 const icone_steak = steak.querySelector(".escondido");
 
 let carne_escolhida; // vai servir para guardar os valores
+let preco_carne;
 let contagem_carne = 0;
 
 // referente as bebidas:
@@ -18,6 +19,7 @@ const litrao = document.querySelector(".litrao");
 const icone_litrao = litrao.querySelector(".escondido");
 
 let bebida_escolhida;
+let preco_bebida;
 let contagem_bebida = 0;
 
 //referente as sobremesas:
@@ -29,12 +31,12 @@ const bolo = document.querySelector(".bolo");
 const icone_bolo = bolo.querySelector(".escondido");
 
 let sobremesa_escolhida;
+let preco_sobremesa;
 let contagem_sobremesa = 0;
+//
 
-// referente ao footer:
-const caixa_footer = document.querySelector(".caixa-interna-footer");
-const texto_caixa_footer = caixa_footer.querySelectorAll("p");
-let texto_footer = texto_caixa_footer.innerHTML;
+let soma_pedido;
+
 
 // funções de carne
 function escolherEmpanado() {
@@ -42,7 +44,8 @@ function escolherEmpanado() {
     grelhado.classList.remove("borda-verde");
     steak.classList.remove("borda-verde");
 
-    carne_escolhida = "Franguinho empanado";
+    carne_escolhida = "Frango empanado";
+    preco_carne = "15,00";
     contagem_carne = 1;
 
     if (icone_grelhado.classList.contains("escondido")) {
@@ -52,6 +55,8 @@ function escolherEmpanado() {
         icone_empanado.classList.remove("escondido");
         icone_grelhado.classList.add("escondido");
     }
+
+    selecionadosPedido();
 }
 
 function escolherGrelhado() {
@@ -59,7 +64,8 @@ function escolherGrelhado() {
     grelhado.classList.add("borda-verde");
     steak.classList.remove("borda-verde");
 
-    carne_escolhida = "Franguinho grelhado";
+    carne_escolhida = "Frango grelhado";
+    preco_carne = "15,50";
     contagem_carne = 1;
 
     if (icone_empanado.classList.contains("escondido")) {
@@ -69,6 +75,8 @@ function escolherGrelhado() {
         icone_grelhado.classList.remove("escondido");
         icone_empanado.classList.add("escondido");
     }
+
+    selecionadosPedido();
 }
 
 function escolherSteak() {
@@ -77,6 +85,7 @@ function escolherSteak() {
     steak.classList.add("borda-verde");
 
     carne_escolhida = "Steak c/batata";
+    preco_carne = "18,00";
     contagem_carne = 1;
 
     if (icone_empanado.classList.contains("escondido")) {
@@ -86,7 +95,10 @@ function escolherSteak() {
         icone_steak.classList.remove("escondido");
         icone_empanado.classList.add("escondido");
     }
+
+    selecionadosPedido();
 }
+
 
 //funções de bebida
 function escolherLata() {
@@ -95,6 +107,7 @@ function escolherLata() {
     litrao.classList.remove("borda-verde");
 
     bebida_escolhida = "Coquinha";
+    preco_bebida = "4,00";
     contagem_bebida = 1;
 
     if (icone_garrafinha.classList.contains("escondido")) {
@@ -104,6 +117,8 @@ function escolherLata() {
         icone_lata.classList.remove("escondido");
         icone_garrafinha.classList.add("escondido");
     }
+
+    selecionadosPedido();
 }
 
 function escolherGarrafinha() {
@@ -112,6 +127,7 @@ function escolherGarrafinha() {
     litrao.classList.remove("borda-verde");
 
     bebida_escolhida = "Coca";
+    preco_bebida = "5,50";
     contagem_bebida = 1;
 
     if (icone_lata.classList.contains("escondido")) {
@@ -121,6 +137,8 @@ function escolherGarrafinha() {
         icone_garrafinha.classList.remove("escondido");
         icone_lata.classList.add("escondido");
     }
+
+    selecionadosPedido();
 }
 
 function escolherLitrao() {
@@ -129,15 +147,18 @@ function escolherLitrao() {
     litrao.classList.add("borda-verde");
 
     bebida_escolhida = "Cocona";
+    preco_bebida = "9,00";
     contagem_bebida = 1;
 
-    if (icone_empanado.classList.contains("escondido")) {
-        icone_grelhado.classList.remove("escondido");
-        icone_steak.classList.add("escondido");
-    } else if (icone_steak.classList.contains("escondido")) {
-        icone_grelhado.classList.remove("escondido");
-        icone_empanado.classList.add("escondido");
+    if (icone_lata.classList.contains("escondido")) {
+        icone_litrao.classList.remove("escondido");
+        icone_garrafinha.classList.add("escondido");
+    } else if (icone_garrafinha.classList.contains("escondido")) {
+        icone_litrao.classList.remove("escondido");
+        icone_lata.classList.add("escondido");
     }
+
+    selecionadosPedido();
 }
 
 //funções de sobremesa
@@ -147,6 +168,7 @@ function escolherPudim() {
     bolo.classList.remove("borda-verde");
 
     sobremesa_escolhida = "Pudim";
+    preco_sobremesa = "8,00";
     contagem_sobremesa = 1;
 
     if (icone_brigadeiro.classList.contains("escondido")) {
@@ -156,6 +178,8 @@ function escolherPudim() {
         icone_pudim.classList.remove("escondido");
         icone_brigadeiro.classList.add("escondido");
     }
+
+    selecionadosPedido();
 }
 
 function escolherBrigadeiro() {
@@ -164,6 +188,7 @@ function escolherBrigadeiro() {
     bolo.classList.remove("borda-verde");
 
     sobremesa_escolhida = "Brigadeiros";
+    preco_sobremesa = "9,00";
     contagem_sobremesa = 1;
 
     if (icone_pudim.classList.contains("escondido")) {
@@ -173,6 +198,8 @@ function escolherBrigadeiro() {
         icone_brigadeiro.classList.remove("escondido");
         icone_pudim.classList.add("escondido");
     }
+
+    selecionadosPedido();
 }
 
 function escolherBolo() {
@@ -181,6 +208,7 @@ function escolherBolo() {
     bolo.classList.add("borda-verde");
 
     sobremesa_escolhida = "Bolo de pote";
+    preco_sobremesa = "10,00";
     contagem_sobremesa = 1;
 
     if (icone_brigadeiro.classList.contains("escondido")) {
@@ -190,10 +218,45 @@ function escolherBolo() {
         icone_bolo.classList.remove("escondido");
         icone_brigadeiro.classList.add("escondido");
     }
+
+    selecionadosPedido();
 }
 
-function finalizarPedido() {
+function selecionadosPedido() {
     if (contagem_carne != 0 && contagem_bebida != 0 && contagem_sobremesa != 0) {
-        texto_footer.innerHTML = "Fechar pedido";
+        const caixa_footer = document.querySelector(".caixa-Floaterna-footer");
+        const botao_footer = document.querySelector(".finalizar-pedido");
+
+        botao_footer.classList.remove("escondido");
     } 
+}
+
+
+function botaoFinalizarPedido() {
+    // mostrando tela de finalizar pedido
+    const telaFinalizarPedido = document.querySelector("aside");
+    const telaSemFinalizarPedido = document.querySelector(".tela-sem-finalizar-pedido");
+
+    telaSemFinalizarPedido.style.opacity = 0.2;
+    telaFinalizarPedido.classList.remove("escondido");
+
+    // mostrando os preços e descrições corretas do pedido:
+    const carneFinalizarPedido = telaFinalizarPedido.querySelector(".pedido-carne");
+    const precoCarneFinalizarPedido = telaFinalizarPedido.querySelector(".preco-carne");
+    const bebidaFinalizarPedido = telaFinalizarPedido.querySelector(".pedido-bebida");
+    const precoBebidaFinalizarPedido = telaFinalizarPedido.querySelector(".preco-bebida");
+    const sobremesaFinalizarPedido = telaFinalizarPedido.querySelector(".pedido-sobremesa");
+    const precoSobremesaFinalizarPedido = telaFinalizarPedido.querySelector(".preco-sobremesa");
+
+    carneFinalizarPedido.innerHTML = carne_escolhida;
+    precoCarneFinalizarPedido.innerHTML = preco_carne;
+    bebidaFinalizarPedido.innerHTML = bebida_escolhida;
+    precoBebidaFinalizarPedido.innerHTML = preco_bebida;
+    sobremesaFinalizarPedido.innerHTML = sobremesa_escolhida;
+    precoSobremesaFinalizarPedido.innerHTML = preco_sobremesa;
+
+    const somaPrecoPedido = telaFinalizarPedido.querySelector(".preco-total .total");
+    soma_pedido = parseFloat(preco_sobremesa.replace(",", ".")) + parseFloat(preco_bebida.replace(",", ".")) + parseFloat(preco_carne.replace(",", "."));
+    somaPrecoPedido.innerHTML = soma_pedido.toLocaleString('pt-br', { style: 'currency', currency: 'BRL'});
+
 }
