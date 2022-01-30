@@ -258,5 +258,25 @@ function botaoFinalizarPedido() {
     const somaPrecoPedido = telaFinalizarPedido.querySelector(".preco-total .total");
     soma_pedido = parseFloat(preco_sobremesa.replace(",", ".")) + parseFloat(preco_bebida.replace(",", ".")) + parseFloat(preco_carne.replace(",", "."));
     somaPrecoPedido.innerHTML = soma_pedido.toLocaleString('pt-br', { style: 'currency', currency: 'BRL'});
+}
 
+function cancelarPedido() {
+    const telaFinalizarPedido = document.querySelector("aside");
+    const telaSemFinalizarPedido = document.querySelector(".tela-sem-finalizar-pedido");
+
+    telaSemFinalizarPedido.style.opacity = 1;
+    telaFinalizarPedido.classList.add("escondido");
+}
+
+function confirmarPedido() {
+    const nome = prompt("Qual o seu nome?");
+    const endereco = prompt("Qual o seu endereço?");
+    
+    let mensagem;
+    
+    mensagem = `Olá, gostaria de fazer o *pedido*:\n - *Prato*: ${carne_escolhida} \n- *Bebida*: ${bebida_escolhida} \n- *Sobremesa*: ${sobremesa_escolhida} \nTotal: R$ *${soma_pedido.toFixed(2)}* \n\nNome: ${nome} \nEndereço: ${endereco}`;
+
+    mensagem = window.encodeURIComponent(mensagem);
+
+    window.open("https://wa.me/+5547997069921?text=" + mensagem, "_blank");
 }
